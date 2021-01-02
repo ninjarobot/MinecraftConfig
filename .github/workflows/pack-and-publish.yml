@@ -23,4 +23,4 @@ jobs:
     - name: Test
       run: dotnet test --no-build --verbosity normal
     - name: Pack
-      run: version=$GITHUB_REF dotnet pack -c Release
+      run: version=${GITHUB_REF##*/} dotnet pack -c Release
