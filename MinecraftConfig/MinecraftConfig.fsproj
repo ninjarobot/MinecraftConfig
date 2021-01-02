@@ -5,10 +5,14 @@
         <Authors>Dave Curylo</Authors>
         <Copyright>2021 Dave Curylo</Copyright>
         <PackageProjectUrl>https://github.com/ninjarobot/MinecraftConfig</PackageProjectUrl>
-        <PackageLicenseUrl>https://github.com/ninjarobot/MinecraftConfig/blob/main/LICENSE</PackageLicenseUrl>
         <RepositoryUrl>https://github.com/ninjarobot/MinecraftConfig</RepositoryUrl>
         <PackageTags>minecraft</PackageTags>
+        <PackageLicenseFile>LICENSE</PackageLicenseFile>
     </PropertyGroup>
+
+    <ItemGroup>
+        <None Include="../LICENSE" Pack="true" PackagePath="" />
+    </ItemGroup>
 
     <ItemGroup>
         <Compile Include="Eula.fs" />
