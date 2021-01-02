@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "MinecraftConfig", "MinecraftConfig\MinecraftConfig.fsproj", "{B18403AE-E788-4B93-86E7-B1D0D9A3BE0E}"
+EndProject
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "MinecraftConfigTests", "MinecraftConfigTests\MinecraftConfigTests.fsproj", "{AAD5CC38-C71F-4A5C-84D5-BC1B20DA6151}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B18403AE-E788-4B93-86E7-B1D0D9A3BE0E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B18403AE-E788-4B93-86E7-B1D0D9A3BE0E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B18403AE-E788-4B93-86E7-B1D0D9A3BE0E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B18403AE-E788-4B93-86E7-B1D0D9A3BE0E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AAD5CC38-C71F-4A5C-84D5-BC1B20DA6151}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AAD5CC38-C71F-4A5C-84D5-BC1B20DA6151}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AAD5CC38-C71F-4A5C-84D5-BC1B20DA6151}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AAD5CC38-C71F-4A5C-84D5-BC1B20DA6151}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

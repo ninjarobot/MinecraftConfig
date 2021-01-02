@@ -1,0 +1,51 @@
+allow-flight	boolean	FALSE
+allow-nether	boolean	TRUE
+broadcast-console-to-ops	boolean	TRUE
+broadcast-rcon-to-ops	boolean	TRUE
+difficulty	string	easy
+enable-command-block	boolean	FALSE
+enable-jmx-monitoring	boolean	FALSE
+enable-rcon	boolean	FALSE
+sync-chunk-writes	boolean	TRUE
+enable-status	boolean	TRUE
+enable-query	boolean	FALSE
+entity-broadcast-range-percentage	integer (0-500)	100
+force-gamemode	boolean	FALSE
+function-permission-level	integer (1-4)	2
+gamemode	string	survival
+generate-structures	boolean	TRUE
+generator-settings	string	blank
+hardcore	boolean	FALSE
+level-name	string	world
+level-seed	string	blank
+level-type	string	default
+max-build-height	integer	256
+max-players	integer (0-(2^31 - 1))	20
+max-tick-time	integer (0–(2^63 - 1))	60000
+max-world-size	integer (1-29999984)	29999984
+motd	string	A Minecraft Server
+network-compression-threshold	integer	256
+online-mode	boolean	TRUE
+op-permission-level	integer (1-4)	4
+player-idle-timeout	integer	0
+prevent-proxy-connections	boolean	FALSE
+pvp	boolean	TRUE
+query.port	integer (1-(2^16 - 2))	25565
+rate-limit	integer	0
+rcon.password	string	blank
+rcon.port	integer (1-(2^16 - 2))	25575
+resource-pack	string	blank
+resource-pack-sha1	string	blank
+require-resource-pack	boolean	FALSE
+server-ip	string	blank
+server-port	integer (1-(2^16 - 2))	25565
+snooper-enabled	boolean	TRUE
+spawn-animals	boolean	TRUE
+spawn-monsters	boolean	TRUE
+spawn-npcs	boolean	TRUE
+spawn-protection	integer	16
+text-filtering-config	[more information needed]	[more information needed]
+use-native-transport	boolean	TRUE
+view-distance	integer (3-32)	10
+white-list	boolean	FALSE
+enforce-whitelist	boolean	FALSE

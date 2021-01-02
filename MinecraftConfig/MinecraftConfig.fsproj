@@ -1,0 +1,18 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFrameworks>netstandard2.0;net5.0</TargetFrameworks>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <Compile Include="Eula.fs" />
+        <Compile Include="Ops.fs" />
+        <Compile Include="ServerProperties.fs" />
+        <Compile Include="Whitelist.fs" />
+    </ItemGroup>
+    
+    <ItemGroup>
+        <PackageReference Include="System.Text.Json" Version="5.0.0" />
+    </ItemGroup>
+
+</Project>
