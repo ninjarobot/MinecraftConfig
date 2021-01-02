@@ -25,4 +25,4 @@ jobs:
     - name: Pack
       run: VERSION=${GITHUB_REF##*/} dotnet pack -o . -c Release
     - name: Publish
-      run: dotnet nuget push MinecraftConfig.*.nupkg -s https://api.nuget.org/v3/index.json --api-key {{ secrets.NUGET_API_KEY }}
+      run: dotnet nuget push MinecraftConfig.*.nupkg -s https://nuget.org -k ${{ secrets.NUGET_API_KEY }}
