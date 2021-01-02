@@ -23,4 +23,6 @@ jobs:
     - name: Test
       run: dotnet test --no-build --verbosity normal
     - name: Pack
-      run: version=${GITHUB_REF##*/} dotnet pack -c Release
+      run: VERSION=${GITHUB_REF##*/} dotnet pack -o . -c Release
+    - name: Publish
+      run: dotnet nuget push MinecraftConfig.*.nupkg -s https://api.nuget.org/v3/index.json --api-key {{ secrets.NUGET_API_KEY }}

@@ -11,6 +11,6 @@ pack: check
 	dotnet pack -c Release
 
 check: clean build
-	dotnet test --no-restore
+	dotnet test --no-build --no-restore
 
 all: build
