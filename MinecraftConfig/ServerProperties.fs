@@ -1,61 +1,62 @@
 ﻿namespace MinecraftConfig
 
+type ServerProperty =
+    | AllowFlight of bool
+    | AllowNether of bool
+    | BroadcastConsoleToOps of bool
+    | BroadcastRconToOps of bool
+    | Difficulty of string
+    | EnableCommandBlock of bool
+    | EnableJmxMonitoring of bool
+    | EnableRcon of bool
+    | SyncChunkWrites of bool
+    | EnableStatus of bool
+    | EnableQuery of bool
+    | EntityBroadcastRangePercentage of int
+    | ForceGamemode of bool
+    | FunctionPermissionLevel of int
+    | Gamemode of string
+    | GenerateStructures of bool
+    | GeneratorSettings of string
+    | Hardcore of bool
+    | LevelName of string
+    | LevelSeed of string
+    | LevelType of string
+    | MaxBuildHeight of int
+    | MaxPlayers of int
+    | MaxTickTime of int
+    | MaxWorldSize of int
+    | Motd of string
+    | NetworkCompressionThreshold of int
+    | OnlineMode of bool
+    | OpPermissionLevel of int
+    | PlayerIdleTimeout of int
+    | PreventProxyConnections of bool
+    | Pvp of bool
+    | QueryPort of int
+    | RateLimit of int
+    | RconPassword of string
+    | RconPort of int
+    | ResourcePack of string
+    | ResourcePackSha1 of string
+    | RequireResourcePack of bool
+    | ServerIp of string
+    | ServerPort of int
+    | SnooperEnabled of bool
+    | SpawnAnimals of bool
+    | SpawnMonsters of bool
+    | SpawnNpcs of bool
+    | SpawnProtection of int
+    | TextFilteringConfig of obj
+    | UseNativeTransport of bool
+    | ViewDistance of int
+    | WhiteList of bool
+    | EnforceWhitelist of bool
+
+[<AutoOpen>]
 module ServerProperties =
     [<Literal>]
     let Filename = "server.properties"
-
-    type ServerProperty =
-        | AllowFlight of bool
-        | AllowNether of bool
-        | BroadcastConsoleToOps of bool
-        | BroadcastRconToOps of bool
-        | Difficulty of string
-        | EnableCommandBlock of bool
-        | EnableJmxMonitoring of bool
-        | EnableRcon of bool
-        | SyncChunkWrites of bool
-        | EnableStatus of bool
-        | EnableQuery of bool
-        | EntityBroadcastRangePercentage of int
-        | ForceGamemode of bool
-        | FunctionPermissionLevel of int
-        | Gamemode of string
-        | GenerateStructures of bool
-        | GeneratorSettings of string
-        | Hardcore of bool
-        | LevelName of string
-        | LevelSeed of string
-        | LevelType of string
-        | MaxBuildHeight of int
-        | MaxPlayers of int
-        | MaxTickTime of int
-        | MaxWorldSize of int
-        | Motd of string
-        | NetworkCompressionThreshold of int
-        | OnlineMode of bool
-        | OpPermissionLevel of int
-        | PlayerIdleTimeout of int
-        | PreventProxyConnections of bool
-        | Pvp of bool
-        | QueryPort of int
-        | RateLimit of int
-        | RconPassword of string
-        | RconPort of int
-        | ResourcePack of string
-        | ResourcePackSha1 of string
-        | RequireResourcePack of bool
-        | ServerIp of string
-        | ServerPort of int
-        | SnooperEnabled of bool
-        | SpawnAnimals of bool
-        | SpawnMonsters of bool
-        | SpawnNpcs of bool
-        | SpawnProtection of int
-        | TextFilteringConfig of obj
-        | UseNativeTransport of bool
-        | ViewDistance of int
-        | WhiteList of bool
-        | EnforceWhitelist of bool
 
     let format = function
         | AllowFlight value -> $"allow-flight={value}" 

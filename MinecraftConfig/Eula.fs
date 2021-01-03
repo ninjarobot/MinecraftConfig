@@ -2,11 +2,12 @@ namespace MinecraftConfig
 
 open System
 
+type Agree = bool
+
+[<AutoOpen>]
 module Eula =
     [<Literal>]
     let Filename = "eula.txt"
-
-    type Agree = bool
 
     let format (agree:Agree) =
         let sb = System.Text.StringBuilder ()

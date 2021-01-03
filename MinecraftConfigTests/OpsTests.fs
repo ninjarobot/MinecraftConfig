@@ -1,7 +1,7 @@
 module OpsTests
 
 open Expecto
-open MinecraftConfig.Ops
+open MinecraftConfig
 
 [<Tests>]
 let tests =
@@ -9,7 +9,7 @@ let tests =
     testCase "Generates ops.json for users" <| fun _ ->
       let uuid = "ff99afd0-cf80-4c8e-86bd-1e616f4113b0"
       let op = { Name="Foo"; Uuid= uuid; Level=OperatorLevel.Level4 }
-      let json = [ op ] |> format
+      let json = [ op ] |> Ops.format
       let expectedJson = """[
   {
     "name": "Foo",
@@ -18,5 +18,5 @@ let tests =
   }
 ]"""
       Expect.equal json expectedJson "Incorrect payload for whitelist"
-      Expect.equal Filename "ops.json" "Incorrect filename to generate"
+      Expect.equal Ops.Filename "ops.json" "Incorrect filename to generate"
   ]

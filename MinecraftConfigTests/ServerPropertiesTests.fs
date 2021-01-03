@@ -2,7 +2,7 @@ module ServerPropertiesTests
 
 open System
 open Expecto
-open MinecraftConfig.ServerProperties
+open MinecraftConfig
 
 [<Tests>]
 let tests =
@@ -16,9 +16,9 @@ let tests =
       let expectedProps = """gamemode=Survival
 allow-nether=True
 allow-flight=True"""
-      let serverProperties = props |> List.map format |> String.concat Environment.NewLine
+      let serverProperties = props |> List.map ServerProperties.format |> String.concat Environment.NewLine
       Expect.equal serverProperties expectedProps "Incorrect payload for server.properties"
-      Expect.equal Filename "server.properties" "Incorrect filename to generate"
+      Expect.equal ServerProperties.Filename "server.properties" "Incorrect filename to generate"
 
     testCase "Generates server.properties file" <| fun _ ->
       System.IO.File.Delete "server.properties"

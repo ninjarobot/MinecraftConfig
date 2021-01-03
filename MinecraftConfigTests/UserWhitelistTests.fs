@@ -1,7 +1,7 @@
 module UserWhitelistTests
 
 open Expecto
-open MinecraftConfig.Whitelist
+open MinecraftConfig
 
 [<Tests>]
 let tests =
@@ -11,7 +11,7 @@ let tests =
       let user1 = { Name="Foo"; Uuid= uuid1 }
       let uuid2 = "90450cca-ad1c-45c9-ab6a-06ae96f539b2"
       let user2 = { Name="Bar"; Uuid= uuid2 }
-      let json = [ user1; user2 ] |> format
+      let json = [ user1; user2 ] |> Whitelist.format
       let expectedJson = """[
   {
     "name": "Foo",
@@ -23,5 +23,5 @@ let tests =
   }
 ]"""
       Expect.equal json expectedJson "Incorrect payload for whitelist"
-      Expect.equal Filename "whitelist.json" "Incorrect filename to generate"
+      Expect.equal Whitelist.Filename "whitelist.json" "Incorrect filename to generate"
   ]
