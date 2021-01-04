@@ -142,8 +142,8 @@ module ServerProperties =
             NetworkCompressionThreshold 256
             MaxWorldSize 29999984
             FunctionPermissionLevel 2
-            RconPort 16940
-            ServerPort 16930
+            RconPort 25575
+            ServerPort 25565
             SpawnNpcs true
             AllowFlight true
             LevelName "world"
