@@ -122,7 +122,7 @@ module ServerProperties =
             SyncChunkWrites true
             ForceGamemode false
             AllowNether true
-            EnforceWhitelist true
+            EnforceWhitelist false
             Gamemode "creative"
             BroadcastConsoleToOps true
             EnableQuery false
@@ -149,7 +149,7 @@ module ServerProperties =
             LevelName "world"
             ViewDistance 10
             SpawnAnimals true
-            WhiteList true
+            WhiteList false
             GenerateStructures true
             OnlineMode true
             MaxBuildHeight 256
