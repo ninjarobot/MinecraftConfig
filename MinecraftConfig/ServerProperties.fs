@@ -58,7 +58,7 @@ module ServerProperties =
     [<Literal>]
     let Filename = "server.properties"
 
-    let format = function
+    let formatProperty = function
         | AllowFlight value -> $"allow-flight={value}" 
         | AllowNether value -> $"allow-nether={value}" 
         | BroadcastConsoleToOps value -> $"broadcast-console-to-ops={value}" 
@@ -109,10 +109,13 @@ module ServerProperties =
         | UseNativeTransport value -> $"use-native-transport={value}" 
         | ViewDistance value -> $"view-distance={value}" 
         | WhiteList value -> $"white-list={value}" 
-        | EnforceWhitelist value -> $"enforce-whitelist={value}" 
+        | EnforceWhitelist value -> $"enforce-whitelist={value}"
+
+    let format (properties : ServerProperty seq) =
+        properties |> Seq.map formatProperty |> String.concat System.Environment.NewLine
 
     let writeServerProperties (properties:ServerProperty seq) =
-        System.IO.File.WriteAllLines (Filename, properties |> Seq.map format)
+        System.IO.File.WriteAllLines (Filename, properties |> Seq.map formatProperty)
     
     let defaultProperties =
         [
@@ -159,4 +162,4 @@ module ServerProperties =
             RateLimit 0
             Motd "My Minecraft Server"
             EnableRcon false
-        ] |> List.sortBy format
+        ] |> List.sortBy formatProperty

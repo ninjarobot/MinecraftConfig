@@ -16,7 +16,7 @@ let tests =
       let expectedProps = """gamemode=Survival
 allow-nether=True
 allow-flight=True"""
-      let serverProperties = props |> List.map ServerProperties.format |> String.concat Environment.NewLine
+      let serverProperties = props |> ServerProperties.format
       Expect.equal serverProperties expectedProps "Incorrect payload for server.properties"
       Expect.equal ServerProperties.Filename "server.properties" "Incorrect filename to generate"
 
