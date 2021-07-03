@@ -25,9 +25,12 @@
         <Compile Include="Whitelist.fs" />
     </ItemGroup>
     
+    <ItemGroup Condition=" '$(TargetFramework)' == 'netstandard2.0' ">
+        <PackageReference Include="System.Text.Json" Version="5.0.0" />
+    </ItemGroup>
+
     <ItemGroup>
         <PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.0.0" PrivateAssets="All"/>
-        <PackageReference Include="System.Text.Json" Version="5.0.0" />
     </ItemGroup>
 
     <PropertyGroup Condition="'$(GITHUB_ACTIONS)' == 'true'">
