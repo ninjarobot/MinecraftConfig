@@ -3,4 +3,11 @@ open Expecto
 
 [<EntryPoint>]
 let main argv =
-    Tests.runTestsInAssembly defaultConfig argv
+    Tests.runTestsWithCLIArgs [] argv (
+        testList "All tests" [
+            EulaTests.tests
+            OpsTests.tests
+            ServerPropertiesTests.tests
+            UserWhitelistTests.tests
+        ]
+    )

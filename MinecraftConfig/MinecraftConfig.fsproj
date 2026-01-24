@@ -3,7 +3,7 @@
     <PropertyGroup>
         <TargetFrameworks>netstandard2.0;net5.0;net6.0</TargetFrameworks>
         <Authors>Dave Curylo</Authors>
-        <Copyright>2021 Dave Curylo</Copyright>
+        <Copyright>2021-2026 Dave Curylo</Copyright>
         <PackageProjectUrl>https://github.com/ninjarobot/MinecraftConfig</PackageProjectUrl>
         <RepositoryUrl>https://github.com/ninjarobot/MinecraftConfig</RepositoryUrl>
         <PackageTags>minecraft</PackageTags>
@@ -26,11 +26,11 @@
     </ItemGroup>
     
     <ItemGroup Condition=" '$(TargetFramework)' == 'netstandard2.0' ">
-        <PackageReference Include="System.Text.Json" Version="5.0.0" />
+        <PackageReference Include="System.Text.Json" Version="10.0.2" />
     </ItemGroup>
 
     <ItemGroup>
-        <PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.0.0" PrivateAssets="All"/>
+        <PackageReference Include="Microsoft.SourceLink.GitHub" Version="10.0.102" PrivateAssets="All"/>
     </ItemGroup>
 
     <PropertyGroup Condition="'$(GITHUB_ACTIONS)' == 'true'">
